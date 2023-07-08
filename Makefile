@@ -8,7 +8,8 @@ dev:
 	python manage.py runserver
 
 start:
-	poetry run python manage.py runserver
+	# poetry run python manage.py runserver
+	gunicorn task_manager.wsgi
 
 d_install:
 	poetry run django-admin version
