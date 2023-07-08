@@ -1,0 +1,11 @@
+*.egg-info
+__pycache__
+../python-project-83/dist/
+*.pyc
+.venv/
+.coverage
+coverage.xml
+.pytest_cache/
+.idea/
+.env
+.DS_Store
