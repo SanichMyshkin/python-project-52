@@ -13,3 +13,8 @@ start:
 d_install:
 	poetry run django-admin version
 	django-admin startproject task_manager .
+
+pu:
+	git add .
+	git commit -m "Some fix"
+	git push
