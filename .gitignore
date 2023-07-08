@@ -1,6 +1,6 @@
 *.egg-info
 __pycache__
-../python-project-83/dist/
+../python-project-52/dist/
 *.pyc
 .venv/
 .coverage
