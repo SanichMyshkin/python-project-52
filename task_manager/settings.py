@@ -5,15 +5,12 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['website',
-                 '127.0.0.1',
-                 '.railway.app',
-                 ]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
