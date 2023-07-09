@@ -12,7 +12,8 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['website',
                  '127.0.0.1',
-                 '.railway.app',]
+                 '.railway.app',
+                 ]
 
 # Application definition
 
