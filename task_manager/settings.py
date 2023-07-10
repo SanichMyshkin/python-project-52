@@ -8,12 +8,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 print(SECRET_KEY)
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = [
     'webserver',
     '127.0.0.1',
-    'web-production-a9f18.up.railway.app',
+    'web-production-a9f18.up.railway.app'
 ]
 
 # Application definition
