@@ -65,8 +65,10 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600,
-                                      conn_health_checks=True, )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3'
+    }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
