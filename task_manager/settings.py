@@ -13,6 +13,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'webserver',
     '127.0.0.1',
+    'web-production-a9f18.up.railway.app',
 ]
 
 # Application definition
