@@ -1,13 +1,12 @@
 from pathlib import Path
 from dotenv import load_dotenv
+import dj_database_url
 import os
-
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
-print(SECRET_KEY)
 DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = [
@@ -62,12 +61,22 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+DATABASE_URL = os.getenv("DATABASE_URl")
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+DATABASES['default'] = dj_database_url.config(
+    default=DATABASE_URL,
+    conn_max_age=600,
+    conn_health_checks=True,
+)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -90,7 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us' # В дальнейшем изменить на ru
+LANGUAGE_CODE = 'ru'  # В дальнейшем изменить на ru
 
 TIME_ZONE = 'UTC'
 
@@ -111,4 +120,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = BASE_DIR / "static"
 
 CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
-
