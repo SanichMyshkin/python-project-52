@@ -24,7 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'task_manager',  # добавляем сюда название проекта 
+    'task_manager',     # добавляем сюда название проекта
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -93,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru'  # В дальнейшем изменить на ru
+LANGUAGE_CODE = 'ru-RU'  # В дальнейшем изменить на ru
 
 TIME_ZONE = 'UTC'
 

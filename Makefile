@@ -19,3 +19,6 @@ pu:
 	git add .
 	git commit -m "Some fix"
 	git push
+
+pid: # Для поиска пида занимающего порт 8000 (необходим для разработки)
+	sudo lsof -i :8000
