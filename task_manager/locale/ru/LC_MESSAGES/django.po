@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-14 12:49+0000\n"
+"POT-Creation-Date: 2023-07-21 10:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,27 +20,29 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/base.html:15
+#: task_manager/templates/base.html:11
 msgid "Title"
 msgstr "Менеджер Задач"
 
-#: task_manager/templates/base.html:21
+#: task_manager/templates/base.html:18
 msgid "NameApp"
 msgstr "Менеджер Задач"
 
-#: task_manager/templates/base.html:29
-msgid "Uesrs"
+#: task_manager/templates/base.html:26
+#: task_manager/templates/users/index.html:7
+msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:32
+#: task_manager/templates/base.html:29 task_manager/templates/login.html:8
+#: task_manager/templates/login.html:13
 msgid "Sign_In"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:35
+#: task_manager/templates/base.html:32
 msgid "Sign_Up"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:45
+#: task_manager/templates/base.html:47
 msgid "Creator"
 msgstr "Создатель"
 
@@ -58,3 +60,112 @@ msgstr ""
 #: task_manager/templates/index.html:11
 msgid "Start"
 msgstr "Начать"
+
+#: task_manager/templates/users/delete.html:7
+msgid "Destroy"
+msgstr "Удалить"
+
+#: task_manager/templates/users/delete.html:10
+msgid "Are you sure delete"
+msgstr "Вы уверены что хотите удалить"
+
+#: task_manager/templates/users/delete.html:11
+msgid "button_destroy"
+msgstr "Удалить"
+
+#: task_manager/templates/users/index.html:13
+msgid "UserName"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/index.html:14
+msgid "FullName"
+msgstr "Полное имя"
+
+#: task_manager/templates/users/index.html:15
+msgid "CreatedDate"
+msgstr "Дата создания"
+
+#: task_manager/templates/users/index.html:26 task_manager/users/views.py:45
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/users/index.html:28
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/users/views.py:28
+msgid "Registry"
+msgstr "Регистрация"
+
+#: task_manager/users/views.py:29
+msgid "button_cr"
+msgstr "Создать"
+
+#: task_manager/users/views.py:34
+msgid "User create successfully"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/users/views.py:44
+msgid "Edit User"
+msgstr "Изменение пользователя"
+
+#: task_manager/users/views.py:56
+#, fuzzy
+#| msgid "User create successfully"
+msgid "User update successfully"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/users/views.py:61
+msgid "You cannot edit another user"
+msgstr "Вы не можете редактировать другого пользователя"
+
+#: task_manager/users/views.py:64 task_manager/users/views.py:82
+msgid "You need to authenticated"
+msgstr "Вам необходимо пройти аутентификацию"
+
+#: task_manager/users/views.py:78
+msgid "You don't have the rights to change another user."
+msgstr "У вас нет прав на изменение другого пользователя."
+
+#: task_manager/users/views.py:91
+msgid "The user deleted! You need to log in again"
+msgstr "Пользователь удален! Вам нужно снова войти в систему"
+
+#: task_manager/users/views.py:95
+msgid "It is not possible to delete a user because it is being used"
+msgstr "Удалить пользователя невозможно, поскольку он используется"
+
+#: task_manager/views.py:16
+msgid "You're logged in"
+msgstr "Вы вошли в систему"
+
+#: task_manager/views.py:21
+msgid "You're logged out"
+msgstr "Вы вышли из системы"
+
+#, fuzzy
+#~| msgid "First name"
+#~ msgid "first_name"
+#~ msgstr "Имя"
+
+#, fuzzy
+#~| msgid "Last name"
+#~ msgid "last_name"
+#~ msgstr "Фамилия"
+
+#~ msgid "u_name"
+#~ msgstr "Имя пользователя"
+
+#~ msgid "Password1"
+#~ msgstr "Пароль"
+
+#~ msgid "Password is too short"
+#~ msgstr ""
+#~ "Введённый пароль слишком короткий. Он должен содержать как минимум 3 "
+#~ "символа."
+
+#~ msgid "Password2"
+#~ msgstr "Подтверждение пароля"
+
+#~ msgid "Create"
+#~ msgstr "Создатель"
