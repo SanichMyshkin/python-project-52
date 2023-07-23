@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 10:08+0000\n"
+"POT-Creation-Date: 2023-07-22 10:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,25 +24,25 @@ msgstr ""
 msgid "Title"
 msgstr "Менеджер Задач"
 
-#: task_manager/templates/base.html:18
+#: task_manager/templates/base.html:22
 msgid "NameApp"
 msgstr "Менеджер Задач"
 
-#: task_manager/templates/base.html:26
+#: task_manager/templates/base.html:30
 #: task_manager/templates/users/index.html:7
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:29 task_manager/templates/login.html:8
+#: task_manager/templates/base.html:33 task_manager/templates/login.html:8
 #: task_manager/templates/login.html:13
 msgid "Sign_In"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:32
+#: task_manager/templates/base.html:36
 msgid "Sign_Up"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:47
+#: task_manager/templates/base.html:51
 msgid "Creator"
 msgstr "Создатель"
 
@@ -136,36 +136,14 @@ msgid "It is not possible to delete a user because it is being used"
 msgstr "Удалить пользователя невозможно, поскольку он используется"
 
 #: task_manager/views.py:16
-msgid "You're logged in"
+msgid "Success_log"
 msgstr "Вы вошли в систему"
 
-#: task_manager/views.py:21
+#: task_manager/views.py:22
 msgid "You're logged out"
 msgstr "Вы вышли из системы"
 
-#, fuzzy
-#~| msgid "First name"
-#~ msgid "first_name"
-#~ msgstr "Имя"
 
 #, fuzzy
-#~| msgid "Last name"
-#~ msgid "last_name"
-#~ msgstr "Фамилия"
-
-#~ msgid "u_name"
-#~ msgstr "Имя пользователя"
-
-#~ msgid "Password1"
-#~ msgstr "Пароль"
-
-#~ msgid "Password is too short"
-#~ msgstr ""
-#~ "Введённый пароль слишком короткий. Он должен содержать как минимум 3 "
-#~ "символа."
-
-#~ msgid "Password2"
-#~ msgstr "Подтверждение пароля"
-
 #~ msgid "Create"
 #~ msgstr "Создатель"

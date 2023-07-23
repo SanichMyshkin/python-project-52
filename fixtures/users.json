@@ -1,0 +1,56 @@
+[
+{
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$le6YIgtSwqP1c5hFMkRIsW$noyMuYqiaaOE4wYfL5Ajk5JyuHVtKmuDLWJiZr3cdkU=",
+        "last_login": "2022-11-08T14:36:01.779Z",
+        "is_superuser": true,
+        "username": "ulitka",
+        "first_name": "",
+        "last_name": "",
+        "email": "spollyv@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-10-06T05:54:52.947Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$EOzalUgg0X5QctXVJZ60vN$uPlw2lHXGgzwG1+LAMVA+xAt7YYmnYjjRGBDopKQM8c=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "BobaF",
+        "first_name": "Boba",
+        "last_name": "Fett",
+        "email": "Boba@fett.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-06T05:58:54Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ifE7DIfTGJJs2SXAqsOmv5$8X+iLHaMaWgSMfHUoRDMqKj+z5bUpLdZmi3d9dVBVY4=",
+        "last_login": "2022-10-24T10:05:40Z",
+        "is_superuser": false,
+        "username": "VolchockG",
+        "first_name": "Григорий",
+        "last_name": "Волков",
+        "email": "lolkek@chebureck.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-06T06:00:02Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

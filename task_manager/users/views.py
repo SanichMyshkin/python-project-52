@@ -1,26 +1,28 @@
-from django.shortcuts import redirect
-from django.views.generic import ListView
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy as _
-from django.contrib.auth import authenticate, login
+from django.views.generic import ListView, CreateView, \
+    DeleteView, UpdateView
+from .models import User
+from .forms import UserForm
+from django.contrib.auth.mixins import LoginRequiredMixin, \
+    UserPassesTestMixin
 from django.contrib import messages
+from django.shortcuts import redirect
+from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import ProtectedError
-
-from .models import TaskUser
-from task_manager.users.forms import UserForm
+from django.contrib.auth import authenticate, login
+from django.utils.translation import gettext as _
 
 
 # Create your views here.
 
 class UsersView(ListView):
-    model = TaskUser
-    context_object_name = 'users_list'
+    model = User
+    context_object_name = 'users'
     template_name = 'users/index.html'
 
 
-class UsersFormCreateView(CreateView):
-    model = TaskUser
+class UsersFormCreateView(SuccessMessageMixin, CreateView):
+    model = User
     template_name = 'users/create.html'
     success_url = reverse_lazy('user_login')
     form_class = UserForm
@@ -35,8 +37,8 @@ class UsersFormCreateView(CreateView):
         return response
 
 
-class UsersUpdateView(UpdateView):
-    model = TaskUser
+class UsersUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = User
     form_class = UserForm
     template_name = 'users/create.html'
     success_url = reverse_lazy('users')
@@ -46,6 +48,10 @@ class UsersUpdateView(UpdateView):
     }
 
     login_url = reverse_lazy('user_login')
+
+    def test_func(self):
+        user = self.get_object()
+        return self.request.user.id == user.id
 
     def form_valid(self, form):
         form.save()
@@ -67,11 +73,16 @@ class UsersUpdateView(UpdateView):
         return redirect(url)
 
 
-class UsersDestroyView(DeleteView):
-    model = TaskUser
+class UsersDestroyView(LoginRequiredMixin, UserPassesTestMixin,
+                       DeleteView, ):
+    model = User
     template_name = 'users/delete.html'
-    success_url = reverse_lazy('users')
+    success_url = reverse_lazy('user_login')
     login_url = reverse_lazy('user_login')
+
+    def test_func(self):
+        user = self.get_object()
+        return self.request.user.id == user.id
 
     def handle_no_permission(self):
         if self.request.user.is_authenticated:

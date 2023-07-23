@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 10:08+0000\n"
+"POT-Creation-Date: 2023-07-22 10:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,25 +22,25 @@ msgstr ""
 msgid "Title"
 msgstr "Task Manager"
 
-#: task_manager/templates/base.html:18
+#: task_manager/templates/base.html:22
 msgid "NameApp"
 msgstr "Task Manager"
 
-#: task_manager/templates/base.html:26
+#: task_manager/templates/base.html:30
 #: task_manager/templates/users/index.html:7
 msgid "Users"
 msgstr "Users"
 
-#: task_manager/templates/base.html:29 task_manager/templates/login.html:8
+#: task_manager/templates/base.html:33 task_manager/templates/login.html:8
 #: task_manager/templates/login.html:13
 msgid "Sign_In"
 msgstr "Sign in"
 
-#: task_manager/templates/base.html:32
+#: task_manager/templates/base.html:36
 msgid "Sign_Up"
 msgstr "Sign up"
 
-#: task_manager/templates/base.html:47
+#: task_manager/templates/base.html:51
 msgid "Creator"
 msgstr "Create by"
 
@@ -134,37 +134,18 @@ msgid "It is not possible to delete a user because it is being used"
 msgstr "It is not possible to delete a user because it is being used"
 
 #: task_manager/views.py:16
-msgid "You're logged in"
+msgid "Success_log"
 msgstr "You're logged in"
 
-#: task_manager/views.py:21
+#: task_manager/views.py:22
 msgid "You're logged out"
 msgstr "You're logged out"
+
 
 #~ msgid "User was successfully deleted"
 #~ msgstr "User was successfully deleted"
 
-#, fuzzy
-#~| msgid "First name"
-#~ msgid "first_name"
-#~ msgstr "First name"
 
 #, fuzzy
-#~| msgid "Last name"
-#~ msgid "last_name"
-#~ msgstr "Last name"
-
-#~ msgid "u_name"
-#~ msgstr "Username"
-
-#~ msgid "Password1"
-#~ msgstr "Password"
-
-#~ msgid "Password is too short"
-#~ msgstr "Password is too short"
-
-#~ msgid "Password2"
-#~ msgstr "Confirm password"
-
 #~ msgid "Create"
 #~ msgstr "Create by"

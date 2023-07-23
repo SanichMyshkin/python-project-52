@@ -1,13 +1,11 @@
 install:
 	poetry install
 
-d_install:
-	poetry run django-admin version
-	django-admin startproject task_manager .
+test:
+	python manage.py test
 
 lint:
 	poetry run flake8 task_manager
-
 
 dev:
 	python manage.py runserver
@@ -43,3 +41,7 @@ ru:
 
 langcomp:
 	python manage.py compilemessages
+
+d_install:
+	poetry run django-admin version
+	django-admin startproject task_manager .

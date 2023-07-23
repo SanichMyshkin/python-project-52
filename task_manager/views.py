@@ -1,6 +1,5 @@
 from django.utils.translation import gettext as _
 from django.views.generic import TemplateView
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -11,9 +10,9 @@ class IndexView(TemplateView):
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):
-    form_class = AuthenticationForm
     template_name = 'login.html'
-    success_message = _("You're logged in")
+    success = _("Success_log")
+    success_message = success
 
 
 class UserLogoutView(SuccessMessageMixin, LogoutView):
