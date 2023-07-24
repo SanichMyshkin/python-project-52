@@ -1,18 +1,17 @@
 {% extends "base.html"%}
 {% load i18n %}
-
 {% block content %}
 <div class="container wrapper flex-grow-1">
     <h2 class="my-4 text-dark text-left mx-0">
-        {% trans 'Users' %}
+        {% trans 'user list nav' %}
     </h2>
     <table class="table table-striped">
         <thead>
         <tr>
             <th>ID</th>
-            <th>{% trans 'UserName'%}</th>
-            <th>{% trans 'FullName'%}</th>
-            <th>{% trans 'CreatedDate'%}</th>
+            <th>{% trans 'username'%}</th>
+            <th>{% trans 'fullname'%}</th>
+            <th>{% trans 'date of create'%}</th>
             <th></th>
         </tr>
         </thead>
@@ -23,9 +22,9 @@
             <td>{{user.first_name}} {{user.last_name}}</td>
             <td>{{user.date_joined}}</td>
             <td>
-                <a href="{% url 'user_update' user.id %}">{% trans 'Update'%}</a>
+                <a href="{% url 'user_update' user.id %}">{% trans 'update button'%}</a>
                 <br>
-                <a href="{% url 'user_delete' user.id %}">{% trans 'Delete'%}</a>
+                <a href="{% url 'user_delete' user.id %}">{% trans 'delete button'%}</a>
             </td>
         </tr>
         {% endfor %}
