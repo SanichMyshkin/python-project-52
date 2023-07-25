@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{% load i18n %}
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h2 class="my-4 text-dark text-left mx-0">
+        {{header}}
+    </h2>
+    <a href="{% url 'status_create' %}" class="btn btn-outline-dark mb-3" role="button">{{button}}</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% trans 'name' %}</th>
+            <th>{% trans 'date of create'%}</th>
+            <th></th>
+        </tr>
+        </thead>
+        {% for status in statuses %}
+        <tr>
+            <td>{{ status.id }}</td>
+            <td>{{ status.name}}</td>
+            <td>{{ status.time_create|date:"d.m.Y H:i" }}</td>
+            <td>
+                <a href="{% url 'status_update' status.id %}">{% trans 'update button'%}</a>
+                <br>
+                <a href="{% url 'status_delete' status.id %}">{% trans 'delete button'%}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+

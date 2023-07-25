@@ -27,8 +27,23 @@ class TransMessagesTemplates:
     delete_user = _('Delete user')
     sign_in_header = _('sign in header')
 
+    status = _('Statuses')  # Статусы
+    create_status = _('Create status')
+    delete_status = _('Delete status')
+    update_status = _('Update status')
+
     # Button
     update_button = _('update button')
     create_button = _('create button')
     delete_button = _('delete button')
     sign_in_button = _('sign in button')  # Войти
+
+
+class TransMessagesStatus:
+    # Warning
+    no_rule_delete = _("This status is used, you can't delete it")
+
+    # Success
+    create_success = _('The status successfully created')
+    update_success = _('The status successfully updated')
+    delete_success = _('The status successfully deleted')

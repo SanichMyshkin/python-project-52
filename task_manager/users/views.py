@@ -13,6 +13,7 @@ from django.contrib.auth import authenticate, login
 from task_manager.translations.trans import TransMessagesUsers, TransMessagesTemplates
 from django.utils.translation import gettext as _
 
+
 # Create your views here.
 
 class UsersView(ListView):

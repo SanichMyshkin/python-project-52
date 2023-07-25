@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 18:39+0000\n"
+"POT-Creation-Date: 2023-07-25 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/base.html:11 task_manager/templates/base.html:22
+#: task_manager/templates/base.html:14 task_manager/templates/base.html:25
 msgid "Title"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/base.html:30
+#: task_manager/templates/base.html:33
 msgid "users list nav"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:33
+#: task_manager/templates/base.html:36
 msgid "sign in nav"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:36
+#: task_manager/templates/base.html:39
 msgid "sign up nav"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:51
+#: task_manager/templates/base.html:54
 msgid "name of creator"
 msgstr "Создатель"
 
@@ -55,35 +55,42 @@ msgstr ""
 msgid "start button"
 msgstr "Начать"
 
+#: task_manager/templates/statuses/index.html:14
+msgid "name"
+msgstr "Имя"
+
+#: task_manager/templates/statuses/index.html:15
+#: task_manager/templates/users/index.html:14
+msgid "date of create"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/index.html:25
+#: task_manager/templates/users/index.html:25
+#: task_manager/translations/trans.py:36
+msgid "update button"
+msgstr "Изменить"
+
+#: task_manager/templates/statuses/index.html:27
+#: task_manager/templates/users/index.html:27
+#: task_manager/translations/trans.py:38
+msgid "delete button"
+msgstr "Удалить"
+
 #: task_manager/templates/users/delete.html:10
 msgid "Are you sure delete"
 msgstr "Вы уверены, что хотите удалить"
 
-#: task_manager/templates/users/index.html:7
+#: task_manager/templates/users/index.html:6
 msgid "user list nav"
 msgstr "Пользователи"
 
-#: task_manager/templates/users/index.html:13
+#: task_manager/templates/users/index.html:12
 msgid "username"
 msgstr "Имя пользователя"
 
-#: task_manager/templates/users/index.html:14
+#: task_manager/templates/users/index.html:13
 msgid "fullname"
 msgstr "Полное имя"
-
-#: task_manager/templates/users/index.html:15
-msgid "date of create"
-msgstr "Дата создания"
-
-#: task_manager/templates/users/index.html:26
-#: task_manager/translations/trans.py:31
-msgid "update button"
-msgstr "Изменить"
-
-#: task_manager/templates/users/index.html:28
-#: task_manager/translations/trans.py:33
-msgid "delete button"
-msgstr "Удалить"
 
 #: task_manager/translations/trans.py:6
 msgid "You need to authenticated"
@@ -137,13 +144,45 @@ msgstr "Удалить пользователя"
 msgid "sign in header"
 msgstr "Вход"
 
+#: task_manager/translations/trans.py:30
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/translations/trans.py:31
+msgid "Create status"
+msgstr "Создать статус"
+
 #: task_manager/translations/trans.py:32
+msgid "Delete status"
+msgstr "Удалить статус"
+
+#: task_manager/translations/trans.py:33
+msgid "Update status"
+msgstr "Изменить статус"
+
+#: task_manager/translations/trans.py:37 task_manager/users/views.py:47
 msgid "create button"
 msgstr "Создать"
 
-#: task_manager/translations/trans.py:34
+#: task_manager/translations/trans.py:39
 msgid "sign in button"
 msgstr "Войти"
+
+#: task_manager/translations/trans.py:44
+msgid "This status is used, you can't delete it"
+msgstr "Этот статус используется, вы не можете его удалить"
+
+#: task_manager/translations/trans.py:47
+msgid "The status successfully created"
+msgstr "Статус успешно создан"
+
+#: task_manager/translations/trans.py:48
+msgid "The status successfully updated"
+msgstr "Статус успешно изменен"
+
+#: task_manager/translations/trans.py:49
+msgid "The status successfully deleted"
+msgstr "Статус успешно удален"
 
 #: task_manager/users/tests.py:11
 msgid "The user successfully created"

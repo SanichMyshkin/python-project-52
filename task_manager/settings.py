@@ -25,8 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'task_manager',  # добавляем сюда название проекта
+    'task_manager',
     'task_manager.users',
+    'task_manager.statuses',
+
     'django_bootstrap5',
 ]
 
@@ -65,6 +67,8 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+# Нужно для деплоя!
 DATABASE_URL = os.getenv("DATABASE_URL")
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600,
@@ -106,7 +110,7 @@ AUTH_USER_MODEL = 'users.User'
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru'
 
 LANGUAGES = (
     ('en', 'English'),
