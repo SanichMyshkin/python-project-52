@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% bootstrap_css %}
+
+
+{% block content %}
+<div class="container wrapper flex-grow-1">
+    <h2 class="my-4 text-dark text-left mx-0">{% trans "Tasks" %}</h2>
+
+    <a href="{% url 'create_tsk' %}" class="btn btn-outline-dark mb-3" role="button">{% trans "Create task" %}</a>
+    <div class="card mb-3">
+        <form method="get">
+            <div class="card-body bg-light">
+                {% bootstrap_form filter.form %}
+                <button type="submit" class="btn btn-dark">{% trans "Show" %}</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <table class="table table-striped border">
+        <thead>
+        <tr>
+            <th>{% translate "ID" %}</th>
+            <th>{% translate "Name" %}</th>
+            <th>{% translate "Status" %}</th>
+            <th>{% translate "Author" %}</th>
+            <th>{% translate "Executor" %}</th>
+            <th>{% translate "Created date" %}</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for tsk in tasks %}
+        <tr>
+            <td>{{ tsk.id }}</td>
+            <td><a href="{% url 'show_task' tsk.pk %}">{{ tsk.name}}</a></td>
+            <td>{{ tsk.status}}</td>
+            <td>{{ tsk.author}}</td>
+            <td>{{ tsk.executor}}</td>
+            <td>{{ tsk.time_create|date:'d.m.Y' }}</td>
+            <td>
+                <a href="{% url 'update_tsk' tsk.pk %}">{% translate "Update" %}</a>
+                <br>
+                <a href="{% url 'delete_tsk' tsk.pk %}">{% translate "Delete" %}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

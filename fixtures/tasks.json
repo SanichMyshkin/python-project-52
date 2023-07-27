@@ -1,0 +1,78 @@
+[
+{
+    "model": "tasks.task",
+    "pk": 6,
+    "fields": {
+        "name": "Паниковать",
+        "description": "Смотреть много новостного контента, закупить по 50 кг гречи и соли, строить теории заговоров.",
+        "author": 1,
+        "status": 1,
+        "executor": 2,
+        "time_create": "2022-10-12T12:26:18.171Z"
+    }
+},
+{
+    "model": "tasks.task",
+    "pk": 7,
+    "fields": {
+        "name": "Полить цветочки",
+        "description": "Взять воду в бутылке на подоконнике и полить все растения, манго не заливать.",
+        "author": 3,
+        "status": 6,
+        "executor": 2,
+        "time_create": "2022-10-13T19:15:24.240Z"
+    }
+},
+{
+    "model": "tasks.task",
+    "pk": 9,
+    "fields": {
+        "name": "Доделать проект",
+        "description": "Вернуться к проекту, дописать тесты, доделать переводы и отправить на автотесты (и не платить еще 7 тыс за следующий месяц).",
+        "author": 2,
+        "status": 1,
+        "executor": 1,
+        "time_create": "2022-11-08T14:38:15.338Z"
+    }
+},
+{
+    "model": "tasks.labelfortask",
+    "pk": 2,
+    "fields": {
+        "task": 7,
+        "labels": 4
+    }
+},
+{
+    "model": "tasks.labelfortask",
+    "pk": 3,
+    "fields": {
+        "task": 7,
+        "labels": 5
+    }
+},
+{
+    "model": "tasks.labelfortask",
+    "pk": 7,
+    "fields": {
+        "task": 6,
+        "labels": 1
+    }
+},
+{
+    "model": "tasks.labelfortask",
+    "pk": 9,
+    "fields": {
+        "task": 6,
+        "labels": 4
+    }
+},
+{
+    "model": "tasks.labelfortask",
+    "pk": 10,
+    "fields": {
+        "task": 9,
+        "labels": 3
+    }
+}
+]

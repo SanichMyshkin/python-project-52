@@ -1,0 +1,42 @@
+[
+{
+    "model": "labels.label",
+    "pk": 1,
+    "fields": {
+        "time_create": "2022-10-15T14:46:40.289Z",
+        "name": "Срочно"
+    }
+},
+{
+    "model": "labels.label",
+    "pk": 2,
+    "fields": {
+        "time_create": "2022-10-15T14:46:46.752Z",
+        "name": "Не срочно"
+    }
+},
+{
+    "model": "labels.label",
+    "pk": 3,
+    "fields": {
+        "time_create": "2022-10-15T14:46:57.210Z",
+        "name": "Нужны прямые руки"
+    }
+},
+{
+    "model": "labels.label",
+    "pk": 4,
+    "fields": {
+        "time_create": "2022-10-15T14:47:30.447Z",
+        "name": "Не для слабонервных"
+    }
+},
+{
+    "model": "labels.label",
+    "pk": 5,
+    "fields": {
+        "time_create": "2022-10-15T14:50:37.736Z",
+        "name": "Плюсик в карму"
+    }
+}
+]

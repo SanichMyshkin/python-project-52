@@ -1,0 +1,37 @@
+{% extends "base.html"%}
+{% load i18n %}
+{% block content %}
+
+<div class="container wrapper flex-grow-1">
+    <h2 class="my-4 text-dark text-left mx-0">
+        {% trans "Labels" %}
+    </h2>
+<a href="{% url 'create_lbl' %}" class="btn btn-outline-dark mb-3" role="button">{% trans "Create label" %}</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% trans 'name' %}</th>
+            <th>{% trans 'date of create'%}</th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+      {% for label in labels %}
+        <tr>
+          <td>{{ label.id }}</td>
+          <td>{{ label.name}}</td>
+          <td>{{ label.time_create|date:'d.m.Y' }}</td>
+          <td>
+              <a href="{% url 'update_lbl' label.pk %}">{% trans "Update" %}</a>
+              <br>
+              <a href="{% url 'delete_lbl' label.pk %}">{% trans "Delete" %}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+</div>
+{% endblock %}
+
+

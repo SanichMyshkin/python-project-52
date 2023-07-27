@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-25 13:20+0000\n"
+"POT-Creation-Date: 2023-07-27 22:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,32 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: task_manager/tasks/filter.py:19 task_manager/translations/trans.py:56
+msgid "Label"
+msgstr "Метка"
+
+#: task_manager/tasks/filter.py:26 task_manager/templates/tasks/index.html:29
+#: task_manager/templates/tasks/show_task.html:24
+#: task_manager/translations/trans.py:57
+msgid "Status"
+msgstr "Статус"
+
+#: task_manager/tasks/filter.py:33 task_manager/templates/tasks/index.html:31
+#: task_manager/templates/tasks/show_task.html:20
+#: task_manager/translations/trans.py:58
+msgid "Executor"
+msgstr "Исполнитель"
+
+#: task_manager/tasks/filter.py:40 task_manager/templates/tasks/index.html:30
+#: task_manager/templates/tasks/show_task.html:16
+#: task_manager/translations/trans.py:61
+msgid "Author"
+msgstr "Автор"
+
+#: task_manager/tasks/filter.py:46
+msgid "My tasks only"
+msgstr "Только мои задачи"
+
 #: task_manager/templates/base.html:14 task_manager/templates/base.html:25
 msgid "Title"
 msgstr "Менеджер задач"
@@ -28,15 +54,31 @@ msgstr "Менеджер задач"
 msgid "users list nav"
 msgstr "Пользователи"
 
-#: task_manager/templates/base.html:36
+#: task_manager/templates/base.html:37
+msgid "statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/base.html:40
+msgid "labels"
+msgstr "Метки"
+
+#: task_manager/templates/base.html:43
+msgid "tasks"
+msgstr "Задачи"
+
+#: task_manager/templates/base.html:46
+msgid "logout"
+msgstr "Выход"
+
+#: task_manager/templates/base.html:51
 msgid "sign in nav"
 msgstr "Вход"
 
-#: task_manager/templates/base.html:39
+#: task_manager/templates/base.html:54
 msgid "sign up nav"
 msgstr "Регистрация"
 
-#: task_manager/templates/base.html:54
+#: task_manager/templates/base.html:70
 msgid "name of creator"
 msgstr "Создатель"
 
@@ -55,14 +97,37 @@ msgstr ""
 msgid "start button"
 msgstr "Начать"
 
+#: task_manager/templates/labels/index.html:7
+#: task_manager/translations/trans.py:62
+msgid "Labels"
+msgstr "Метки"
+
+#: task_manager/templates/labels/index.html:9
+#: task_manager/translations/trans.py:77
+msgid "Create label"
+msgstr "Создать метку"
+
+#: task_manager/templates/labels/index.html:14
 #: task_manager/templates/statuses/index.html:14
 msgid "name"
 msgstr "Имя"
 
+#: task_manager/templates/labels/index.html:15
 #: task_manager/templates/statuses/index.html:15
 #: task_manager/templates/users/index.html:14
 msgid "date of create"
 msgstr "Дата создания"
+
+#: task_manager/templates/labels/index.html:26
+#: task_manager/templates/tasks/index.html:46
+#: task_manager/templates/tasks/show_task.html:43
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/labels/index.html:28
+#: task_manager/templates/tasks/index.html:48
+msgid "Delete"
+msgstr "Удалить"
 
 #: task_manager/templates/statuses/index.html:25
 #: task_manager/templates/users/index.html:25
@@ -75,6 +140,45 @@ msgstr "Изменить"
 #: task_manager/translations/trans.py:38
 msgid "delete button"
 msgstr "Удалить"
+
+#: task_manager/templates/tasks/index.html:10
+msgid "Tasks"
+msgstr "Задачи"
+
+#: task_manager/templates/tasks/index.html:12
+#: task_manager/translations/trans.py:66
+msgid "Create task"
+msgstr "Создать задачу"
+
+#: task_manager/templates/tasks/index.html:17
+msgid "Show"
+msgstr "Показать"
+
+#: task_manager/templates/tasks/index.html:27
+msgid "ID"
+msgstr "ID"
+
+#: task_manager/templates/tasks/index.html:28
+#: task_manager/translations/trans.py:54
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/templates/tasks/index.html:32
+#: task_manager/templates/tasks/show_task.html:28
+msgid "Created date"
+msgstr "Дата создания"
+
+#: task_manager/templates/tasks/show_task.html:7
+msgid "Task show"
+msgstr "Показать задачу"
+
+#: task_manager/templates/tasks/show_task.html:33
+msgid "Labels:"
+msgstr "Метки:"
+
+#: task_manager/templates/tasks/show_task.html:45
+msgid "Create"
+msgstr "Создать"
 
 #: task_manager/templates/users/delete.html:10
 msgid "Are you sure delete"
@@ -183,6 +287,66 @@ msgstr "Статус успешно изменен"
 #: task_manager/translations/trans.py:49
 msgid "The status successfully deleted"
 msgstr "Статус успешно удален"
+
+#: task_manager/translations/trans.py:55
+msgid "Description"
+msgstr "Описание"
+
+#: task_manager/translations/trans.py:59
+msgid "Date"
+msgstr "Дата"
+
+#: task_manager/translations/trans.py:60
+msgid "Task"
+msgstr "Задача"
+
+#: task_manager/translations/trans.py:67
+msgid "Update task"
+msgstr "Изменить задачу"
+
+#: task_manager/translations/trans.py:68
+msgid "To delete task"
+msgstr "Удалить задачу"
+
+#: task_manager/translations/trans.py:69
+msgid "The task can only be deleted by its author"
+msgstr "Задача может быть удалена только ее автором"
+
+#: task_manager/translations/trans.py:71
+msgid "The task successfully deleted"
+msgstr "Задача успешно удалена"
+
+#: task_manager/translations/trans.py:72
+msgid "The task successfully created"
+msgstr "Задача успешно создана"
+
+#: task_manager/translations/trans.py:73
+msgid "The task successfully updated"
+msgstr "Задача успешно изменена"
+
+#: task_manager/translations/trans.py:78
+msgid "Update label"
+msgstr "Изменить метку"
+
+#: task_manager/translations/trans.py:79
+msgid "To delete label"
+msgstr "Удалить метку"
+
+#: task_manager/translations/trans.py:80
+msgid "This label is used, you can't delete it"
+msgstr "Эта метка используется, вы не можете её удалить"
+
+#: task_manager/translations/trans.py:82
+msgid "The label successfully created"
+msgstr "Метка успешно создана"
+
+#: task_manager/translations/trans.py:83
+msgid "The label successfully deleted"
+msgstr "Метка успешно удалена"
+
+#: task_manager/translations/trans.py:84
+msgid "The label successfully updated"
+msgstr "Метка успешно изменена"
 
 #: task_manager/users/tests.py:11
 msgid "The user successfully created"

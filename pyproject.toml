@@ -16,6 +16,7 @@ gunicorn = "^20.1.0"
 whitenoise = "^6.5.0"
 psycopg2 = "^2.9.6"
 django-bootstrap5 = "^23.3"
+django-filter = "^23.2"
 
 
 [build-system]

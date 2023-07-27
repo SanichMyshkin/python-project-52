@@ -32,12 +32,28 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'users' %}">{% trans 'users list nav' %}</a>
                 </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'statuses'%}">{% trans 'statuses'%}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'labels'%}">{% trans 'labels'%}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tasks_list'%}">{% trans 'tasks'%}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_logout'%}">{% trans 'logout' %}</a>
+                </li>
+                {% else %}
+
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'user_login'%}">{% trans 'sign in nav' %}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'user_create' %}">{% trans 'sign up nav' %}</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </div>

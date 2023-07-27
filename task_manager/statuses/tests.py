@@ -15,7 +15,7 @@ class TestStatusesWithoutAuth(TestCase):
                      reverse('status_delete', args=[1]),
                      reverse('status_update', args=[1])]
 
-    def test_no_auth(self):
+    def test_no_login(self):
         for u in self.urls:
             response = self.client.get(u)
             self.assertRedirects(response, self.login)
@@ -31,16 +31,16 @@ class StatusesTestCase(TestCase):
         self.form_data = {'name': 'new status'}
 
     def test_status_list(self):
-        self.s1 = Status.objects.get(pk=1)
-        self.s2 = Status.objects.get(pk=5)
-        self.s3 = Status.objects.get(pk=6)
+        self.first_status = Status.objects.get(pk=1)
+        self.second_status = Status.objects.get(pk=5)
+        self.third_status = Status.objects.get(pk=6)
         """ GET """
         response = self.client.get(self.statuses)
         self.assertEqual(response.status_code, 200)
         response_tasks = list(response.context['statuses'])
         self.assertQuerysetEqual(response_tasks,
-                                 [self.s1, self.s2,
-                                  self.s3])
+                                 [self.first_status, self.second_status,
+                                  self.third_status])
 
     def test_create_status(self):
         self.create_status = reverse('status_create')

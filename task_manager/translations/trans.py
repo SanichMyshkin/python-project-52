@@ -47,3 +47,38 @@ class TransMessagesStatus:
     create_success = _('The status successfully created')
     update_success = _('The status successfully updated')
     delete_success = _('The status successfully deleted')
+
+
+class NameForField:
+    def __init__(self):
+        self.name = _('Name')
+        self.descr = _('Description')
+        self.label = _('Label')
+        self.status = _('Status')
+        self.executor = _('Executor')
+        self.date = _('Date')
+        self.task = _('Task')
+        self.author = _('Author')
+        self.labels = _('Labels')
+
+
+class TransMessagesTask:
+    create_task = _('Create task')
+    update_task = _('Update task')
+    to_del_task = _('To delete task')
+    no_delete_task = _("The task can only be deleted by its author")
+
+    success_delete = _('The task successfully deleted')
+    success_create = _('The task successfully created')
+    success_update = _('The task successfully updated')
+
+
+class TransMessagesLabels:
+    create_label = _('Create label')
+    update_label = _('Update label')
+    to_del_label = _('To delete label')
+    no_delete_label = _("This label is used, you can't delete it")
+
+    success_create = _('The label successfully created')
+    success_delete = _('The label successfully deleted')
+    success_update = _('The label successfully updated')
