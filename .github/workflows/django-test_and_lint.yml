@@ -18,8 +18,8 @@ jobs:
            make install
       - name: Run tests
         env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          ROLLBAR_KEY: ${{ secrets.ROLLBAR_KEY }}
+          SECRET_KEY: 'django-insecure-b&xn*jnt_l=$so!dz*^8^_r@0dlcj-@c@x*%jeigj&%k$@=!91'
+          ROLLBAR_KEY: 'rollbar_key'
           DEBUG: True
         run: |
            make test
@@ -27,8 +27,8 @@ jobs:
         uses: paambaati/codeclimate-action@v2.7.4
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          ROLLBAR_KEY: ${{ secrets.ROLLBAR_KEY }}
+          SECRET_KEY: 'django-insecure-b&xn*jnt_l=$so!dz*^8^_r@0dlcj-@c@x*%jeigj&%k$@=!91'
+          ROLLBAR_KEY: 'rollbar_key'
         with:
           coverageCommand: make test-coverage
           debug: true
