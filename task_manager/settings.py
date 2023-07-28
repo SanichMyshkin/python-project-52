@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'task_manager.tasks',
     'task_manager.labels',
 
-
     'rollbar',
     'django_filters',
     'django_bootstrap5',
