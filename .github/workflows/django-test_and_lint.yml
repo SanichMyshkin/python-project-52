@@ -26,7 +26,7 @@ jobs:
       - name: code coverage
         uses: paambaati/codeclimate-action@v2.7.4
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: 'SOME_KEY'
           SECRET_KEY: 'django-insecure-b&xn*jnt_l=$so!dz*^8^_r@0dlcj-@c@x*%jeigj&%k$@=!91'
           ROLLBAR_KEY: 'rollbar_key'
         with:
