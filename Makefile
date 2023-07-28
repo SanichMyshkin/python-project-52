@@ -2,7 +2,7 @@ install:
 	poetry install
 
 test:
-	python manage.py test
+	poetry run python manage.py test
 
 dev:
 	python manage.py runserver
