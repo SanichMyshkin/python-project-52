@@ -248,16 +248,6 @@ files = [
 Django = ">=3.2"
 
 [[package]]
-name = "django-pytest"
-version = "0.2.0"
-description = "django test runner to use py.test tests"
-optional = false
-python-versions = "*"
-files = [
-    {file = "django-pytest-0.2.0.tar.gz", hash = "sha256:de21f20f9e7eb941529d75078b18192506a9f6d4ae80f86fbe2f3bcac8e09d71"},
-]
-
-[[package]]
 name = "flake8"
 version = "6.0.0"
 description = "the modular source code checker: pep8 pyflakes and co"
@@ -508,4 +498,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "ac90620b0088da5c6166df01d47fbe4802007f2834848e6b3ece1792c350de1f"
+content-hash = "80ee78b4daf9daba66ca54ef865c5851495cc830c10a0b561c8b2f5ad3229440"
