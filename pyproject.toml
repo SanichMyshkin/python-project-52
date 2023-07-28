@@ -17,6 +17,7 @@ whitenoise = "^6.5.0"
 psycopg2 = "^2.9.6"
 django-bootstrap5 = "^23.3"
 django-filter = "^23.2"
+rollbar = "^0.16.3"
 
 
 [build-system]

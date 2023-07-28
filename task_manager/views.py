@@ -2,7 +2,8 @@ from django.views.generic import TemplateView
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
-from task_manager.translations.trans import TransMessagesUsers, TransMessagesTemplates
+from task_manager.translations.trans import TransMessagesUsers, \
+    TransMessagesTemplates
 
 
 class IndexView(TemplateView):

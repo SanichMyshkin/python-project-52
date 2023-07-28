@@ -81,7 +81,8 @@ class TasksTestCase(TestCase):
         new_task = Task.objects.get(name=self.form_data['name'])
         self.assertEqual(new_task.executor.id, self.user2.id)
         self.assertEqual(new_task.author.id, self.user1.id)
-        self.assertContains(post_response, text=TransMessagesTask.success_create)
+        self.assertContains(post_response,
+                            text=TransMessagesTask.success_create)
 
     def test_update_task(self):
         self.client.force_login(self.user1)
@@ -95,7 +96,8 @@ class TasksTestCase(TestCase):
                                          follow=True)
         self.assertRedirects(post_response, self.tasks)
         self.assertEqual(Task.objects.get(pk=9).executor, self.user2)
-        self.assertContains(post_response, text=TransMessagesTask.success_update)
+        self.assertContains(post_response,
+                            text=TransMessagesTask.success_update)
 
     def test_delete_self_task(self):
         self.client.force_login(self.user1)
@@ -107,7 +109,8 @@ class TasksTestCase(TestCase):
         self.assertRedirects(post_response, self.tasks)
         with self.assertRaises(ObjectDoesNotExist):
             Task.objects.get(pk=6)
-        self.assertContains(post_response, text=TransMessagesTask.success_delete)
+        self.assertContains(post_response,
+                            text=TransMessagesTask.success_delete)
 
     def test_delete_not_self_task(self):
         self.client.force_login(self.user2)

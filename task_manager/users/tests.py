@@ -85,7 +85,7 @@ class UserTestCase(TestCase):
         self.assertEqual(len(User.objects.all()), 3)
         """ POST """
         post_response = self.client.post(del_user1, follow=True)
-        # self.assertContains(post_response, UserTestCase.no_rigths_for_user)
+        self.assertContains(post_response, UserTestCase.no_rigths_for_user)
 
     def delete_user_without_tasks(self):
         self.client.force_login(self.user3)
@@ -109,7 +109,7 @@ class UserTestCase(TestCase):
         self.assertEqual(len(User.objects.all()), 3)
         """ POST """
         post_response = self.client.post(del_user2, follow=True)
-        # self.assertContains(post_response, UserTestCase.no_delete_user)
+        self.assertContains(post_response, UserTestCase.no_delete_user)
 
 
 '''from django.test import TestCase, TransactionTestCase

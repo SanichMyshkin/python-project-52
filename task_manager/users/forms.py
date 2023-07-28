@@ -12,10 +12,9 @@ class UserForm(UserCreationForm):
 
     def clean_username(self):
         username = self.cleaned_data.get("username")
-        current_user_id = self.instance.id  # Получаем идентификатор текущего пользователя
+        current_user_id = self.instance.id
 
         if username:
-            # Исключаем текущего пользователя из запроса, чтобы не сравнивать его имя с собой
             user_exists = self._meta.model.objects.filter(
                 username__iexact=username
             ).exclude(id=current_user_id).exists()

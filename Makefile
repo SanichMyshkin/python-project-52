@@ -4,14 +4,10 @@ install:
 test:
 	python manage.py test
 
-lint:
-	poetry run flake8 task_manager
-
 dev:
 	python manage.py runserver
 
-shell:
-	python manage.py shell
+
 
 migrate:
 	python manage.py migrate
@@ -19,6 +15,10 @@ migrate:
 start:
 	# poetry run python manage.py runserver
 	gunicorn task_manager.wsgi
+
+lint:
+	poetry run flake8 task_manager --exclude migrations
+
 
 
 
@@ -45,3 +45,6 @@ langcomp:
 d_install:
 	poetry run django-admin version
 	django-admin startproject task_manager .
+
+shell:
+	python manage.py shell

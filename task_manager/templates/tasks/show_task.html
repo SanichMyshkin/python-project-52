@@ -4,48 +4,56 @@
 
 {% block content %}
 <div class="container wrapper flex-grow-1">
-<h1>{% trans 'Task show' %}</h1>
-<div class="card">
-  <div class="card-header bg-info text-white">
-    <h2>{{ task.name }}</h2>
-  </div>
-    <div class="card-body bg-light" >
-    {{ task.description }}
+    <div class="my-4 text-dark text-left mx-0">
+        <h2>{% trans 'Task show' %}</h2>
     </div>
-     <div class="row m-1">
-        <div class="col">{% trans 'Author' %}</div>
-        <div class="col">{{ task.author }}</div>
-      </div>
-      <div class="row m-1">
-        <div class="col">{% trans 'Executor' %}</div>
-        <div class="col">{{ task.executor }}</div>
-      </div>
-      <div class="row m-1">
-        <div class="col">{% trans 'Status' %}</div>
-        <div class="col">{{ task.status }}</div>
-      </div>
-      <div class="row m-1">
-        <div class="col">{% trans 'Created date' %}</div>
-        <div class="col">{{ task.time_create|date:'d.m.Y' }}</div>
-      </div>
-    <div class="row m-1">
-        <div class="col">
-            <h6>{% trans "Labels:" %}</h6>
-            {% for lbl in task.labels.all %}
-            <ul>
-                <li>{{ lbl }}</li>
-            </ul>
-            {% endfor %}
+
+    <div class="card">
+        <div class="card-header bg-grey">
+            <h2>{{ task.name }}</h2>
+        </div>
+        <div class="card-body mb-3">
+
+            <div class="border-bottom">
+                <p>{{ task.description }}</p>
+            </div>
+
+
+            <div class="row m-1 pt-2">
+                <div class="col">{% trans 'Author' %}</div>
+                <div class="col">{{ task.author }}</div>
+            </div>
+            <div class="row m-1">
+                <div class="col">{% trans 'Executor' %}</div>
+                <div class="col">{{ task.executor }}</div>
+            </div>
+            <div class="row m-1">
+                <div class="col">{% trans 'Status' %}</div>
+                <div class="col">{{ task.status }}</div>
+            </div>
+            <div class="row m-1">
+                <div class="col">{% trans 'Created date' %}</div>
+                <div class="col">{{ task.time_create|date:'d.m.Y' }}</div>
+            </div>
+            <div class="row m-1">
+                <div class="col">
+                    <h6>{% trans "Labels:" %}</h6>
+                    {% for lbl in task.labels.all %}
+                    <ul>
+                        <li>{{ lbl }}</li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row m-1">
+                <div class="col">
+                    <a href="{% url 'update_tsk' task.pk %}">{% trans 'Update' %}</a>
+                    <br>
+                    <a href="{% url 'delete_tsk' task.pk %}">{% trans 'Create' %}</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row m-1">
-        <div class="col">
-          <a href="{% url 'update_tsk' task.pk %}">{% trans 'Update' %}</a>
-          <br>
-          <a href="{% url 'delete_tsk' task.pk %}">{% trans 'Create' %}</a>
-        </div>
-    </div>
-</div>
 </div>
 
 {% endblock %}

@@ -1,6 +1,7 @@
 from pathlib import Path
 from dotenv import load_dotenv
-import dj_database_url
+import dj_database_url  # NOQA F401
+import rollbar
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +32,8 @@ INSTALLED_APPS = [
     'task_manager.tasks',
     'task_manager.labels',
 
+    'rollbar',
+    'django_filters',
     'django_bootstrap5',
 ]
 
@@ -43,6 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
     # 'django.middleware.locale.LocaleMiddleware',
 ]
 
@@ -51,7 +55,7 @@ ROOT_URLCONF = 'task_manager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Сюда добавляем располжение директориии шаблонов
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,3 +151,14 @@ LOCALE_PATHS = (
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, 'fixtures'),
 ]
+
+ROLLBAR_KEY = os.getenv("ROLLBAR_KEY")
+
+ROLLBAR = {
+    'access_token': ROLLBAR_KEY,
+    'environment': 'development' if DEBUG else 'production',
+    'code_version': '1.0',
+    'root': BASE_DIR,
+}
+
+rollbar.init(**ROLLBAR)

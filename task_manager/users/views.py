@@ -10,7 +10,8 @@ from django.shortcuts import redirect
 from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import ProtectedError
 from django.contrib.auth import authenticate, login
-from task_manager.translations.trans import TransMessagesUsers, TransMessagesTemplates
+from task_manager.translations.trans import TransMessagesUsers, \
+    TransMessagesTemplates
 from django.utils.translation import gettext as _
 
 

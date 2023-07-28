@@ -4,7 +4,12 @@ from task_manager.statuses.views import StatusView, \
 
 urlpatterns = [
     path('', StatusView.as_view(), name='statuses'),
-    path('create/', StatusCreateView.as_view(), name='status_create'),
-    path('<int:pk>/delete/', StatusDestroyView.as_view(), name='status_delete'),
-    path('<int:pk>/update/', StatusUpdateView.as_view(), name='status_update'),
+    path('create/', StatusCreateView.as_view(),
+         name='status_create'),
+
+    path('<int:pk>/delete/', StatusDestroyView.as_view(),
+         name='status_delete'),
+
+    path('<int:pk>/update/', StatusUpdateView.as_view(),
+         name='status_update'),
 ]
