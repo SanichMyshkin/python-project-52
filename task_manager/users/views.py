@@ -29,7 +29,7 @@ class UsersFormCreateView(SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('user_login')
     form_class = UserForm
     extra_context = {
-        'header': TransMessagesTemplates.create_user,  # регистрация
+        'header': TransMessagesTemplates.registry,  # регистрация
         'button': TransMessagesTemplates.create_button
     }
 

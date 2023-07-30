@@ -24,6 +24,7 @@ class TransMessagesTemplates:
     # Headers
     edit_user = _('Edit user')
     create_user = _('Create user')  # регистрация
+    registry = _('Registry')
     delete_user = _('Delete user')
     sign_in_header = _('sign in header')
 
