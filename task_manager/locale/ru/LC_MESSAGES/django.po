@@ -242,7 +242,7 @@ msgstr "Регистрация"
 
 #: task_manager/translations/trans.py:27
 msgid "Registry"
-msgstr "Зарегистрироваться"
+msgstr "Зарегистрировать"
 
 #: task_manager/translations/trans.py:28
 msgid "Delete user"
