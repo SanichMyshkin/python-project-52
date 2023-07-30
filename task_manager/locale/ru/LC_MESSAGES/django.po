@@ -222,7 +222,7 @@ msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/translations/trans.py:16 task_manager/users/tests.py:15
 msgid "The user deleted! You need to log in again"
-msgstr "Пользователь удален! Вам нужно снова войти в систему"
+msgstr "Пользователь успешно удален"
 
 #: task_manager/translations/trans.py:17
 msgid "You are successfully logged in"
