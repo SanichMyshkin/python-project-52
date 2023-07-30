@@ -16,7 +16,7 @@ whitenoise = "^6.5.0"
 django-bootstrap5 = "^23.3"
 django-filter = "^23.2"
 rollbar = "^0.16.3"
-psycopg2-binary = "^2.9.3"
+psycopg2-binary = "^2.9.6"
 
 
 [tool.poetry.group.dev.dependencies]
