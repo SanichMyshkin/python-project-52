@@ -274,7 +274,7 @@ msgstr "Create"
 
 #: task_manager/translations/trans.py:40
 msgid "confirm delete"
-msgstr "Да, удалить"
+msgstr "Yes, delete"
 
 #: task_manager/translations/trans.py:41
 msgid "sign in button"
