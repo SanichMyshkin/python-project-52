@@ -52,7 +52,7 @@ class StatusDestroyView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('statuses')
     template_name = 'users/delete.html'
     extra_context = {'header': TransMessagesTemplates.delete_status,
-                     'button': TransMessagesTemplates.delete_button
+                     'button': TransMessagesTemplates.confirm_delete
                      }
 
     def handle_no_permission(self):

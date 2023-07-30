@@ -81,7 +81,7 @@ class DeleteTask(LoginRequiredMixin, SuccessMessageMixin,
     template_name = 'users/delete.html'
     success_message = TransMessagesTask.success_delete
     extra_context = {'header': TransMessagesTask.to_del_task,
-                     'button': TransMessagesTemplates.delete_button}
+                     'button': TransMessagesTemplates.confirm_delete}
 
     def test_func(self):
         task = self.get_object()

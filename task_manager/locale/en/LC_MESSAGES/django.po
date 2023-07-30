@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-30 13:09+0000\n"
+"POT-Creation-Date: 2023-07-30 13:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: task_manager/tasks/filter.py:19 task_manager/translations/trans.py:57
+#: task_manager/tasks/filter.py:19 task_manager/translations/trans.py:58
 msgid "Label"
 msgstr "Label"
 
 #: task_manager/tasks/filter.py:26 task_manager/templates/tasks/index.html:29
 #: task_manager/templates/tasks/show_task.html:31
-#: task_manager/translations/trans.py:58
+#: task_manager/translations/trans.py:59
 msgid "Status"
 msgstr "Statuse"
 
 #: task_manager/tasks/filter.py:33 task_manager/templates/tasks/index.html:31
 #: task_manager/templates/tasks/show_task.html:27
-#: task_manager/translations/trans.py:59
+#: task_manager/translations/trans.py:60
 msgid "Executor"
 msgstr "Executor"
 
 #: task_manager/tasks/filter.py:40 task_manager/templates/tasks/index.html:30
 #: task_manager/templates/tasks/show_task.html:23
-#: task_manager/translations/trans.py:62
+#: task_manager/translations/trans.py:63
 msgid "Author"
 msgstr "Author"
 
@@ -98,12 +98,12 @@ msgid "start button"
 msgstr "Start"
 
 #: task_manager/templates/labels/index.html:7
-#: task_manager/translations/trans.py:63
+#: task_manager/translations/trans.py:64
 msgid "Labels"
 msgstr "Labels"
 
 #: task_manager/templates/labels/index.html:9
-#: task_manager/translations/trans.py:78
+#: task_manager/translations/trans.py:79
 msgid "Create label"
 msgstr "Create label"
 
@@ -146,7 +146,7 @@ msgid "Tasks"
 msgstr "Tasks"
 
 #: task_manager/templates/tasks/index.html:12
-#: task_manager/translations/trans.py:67
+#: task_manager/translations/trans.py:68
 msgid "Create task"
 msgstr "Create task"
 
@@ -159,7 +159,7 @@ msgid "ID"
 msgstr "ID"
 
 #: task_manager/templates/tasks/index.html:28
-#: task_manager/translations/trans.py:55
+#: task_manager/translations/trans.py:56
 msgid "Name"
 msgstr "Name"
 
@@ -273,82 +273,86 @@ msgid "create button"
 msgstr "Create"
 
 #: task_manager/translations/trans.py:40
+msgid "confirm delete"
+msgstr "Да, удалить"
+
+#: task_manager/translations/trans.py:41
 msgid "sign in button"
 msgstr "Sign in"
 
-#: task_manager/translations/trans.py:45
+#: task_manager/translations/trans.py:46
 msgid "This status is used, you can't delete it"
 msgstr "This status is used, you can't delete it"
 
-#: task_manager/translations/trans.py:48
+#: task_manager/translations/trans.py:49
 msgid "The status successfully created"
 msgstr "The status successfully created"
 
-#: task_manager/translations/trans.py:49
+#: task_manager/translations/trans.py:50
 msgid "The status successfully updated"
 msgstr "The status successfully updated"
 
-#: task_manager/translations/trans.py:50
+#: task_manager/translations/trans.py:51
 msgid "The status successfully deleted"
 msgstr "The status successfully deleted"
 
-#: task_manager/translations/trans.py:56
+#: task_manager/translations/trans.py:57
 msgid "Description"
 msgstr "Description"
 
-#: task_manager/translations/trans.py:60
+#: task_manager/translations/trans.py:61
 msgid "Date"
 msgstr "Date"
 
-#: task_manager/translations/trans.py:61
+#: task_manager/translations/trans.py:62
 msgid "Task"
 msgstr "Task"
 
-#: task_manager/translations/trans.py:68
+#: task_manager/translations/trans.py:69
 msgid "Update task"
 msgstr "Edit task"
 
-#: task_manager/translations/trans.py:69
+#: task_manager/translations/trans.py:70
 msgid "To delete task"
 msgstr "Delete task"
 
-#: task_manager/translations/trans.py:70
+#: task_manager/translations/trans.py:71
 msgid "The task can only be deleted by its author"
 msgstr "The task can only be deleted by its author"
 
-#: task_manager/translations/trans.py:72
+#: task_manager/translations/trans.py:73
 msgid "The task successfully deleted"
 msgstr "The task successfully deleted"
 
-#: task_manager/translations/trans.py:73
+#: task_manager/translations/trans.py:74
 msgid "The task successfully created"
 msgstr "The task successfully created"
 
-#: task_manager/translations/trans.py:74
+#: task_manager/translations/trans.py:75
 msgid "The task successfully updated"
 msgstr "The task successfully updated"
 
-#: task_manager/translations/trans.py:79
+#: task_manager/translations/trans.py:80
 msgid "Update label"
 msgstr "Edit label"
 
-#: task_manager/translations/trans.py:80
+#: task_manager/translations/trans.py:81
 msgid "To delete label"
 msgstr "Delete label"
 
-#: task_manager/translations/trans.py:81
+#: task_manager/translations/trans.py:82
 msgid "This label is used, you can't delete it"
 msgstr "This label is used, you can't delete it"
 
-#: task_manager/translations/trans.py:83
+#: task_manager/translations/trans.py:84
 msgid "The label successfully created"
 msgstr "The label successfully created"
 
-#: task_manager/translations/trans.py:84
+#: task_manager/translations/trans.py:85
 msgid "The label successfully deleted"
 msgstr "The label successfully deleted"
 
-#: task_manager/translations/trans.py:85
+#: task_manager/translations/trans.py:86
 msgid "The label successfully updated"
 msgstr "The label successfully updated"
 

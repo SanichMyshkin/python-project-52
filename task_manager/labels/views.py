@@ -58,7 +58,7 @@ class DeleteLabel(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('labels')
     template_name = 'users/delete.html'
     extra_context = {"header": TransMessagesLabels.to_del_label,
-                     'button': TransMessagesTemplates.delete_button}
+                     'button': TransMessagesTemplates.confirm_delete}
 
     def handle_no_permission(self):
         messages.warning(self.request, TransMessagesUsers.no_login)

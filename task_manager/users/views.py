@@ -83,7 +83,7 @@ class UsersDestroyView(LoginRequiredMixin, UserPassesTestMixin,
     login_url = reverse_lazy('user_login')
     extra_context = {
         'header': TransMessagesTemplates.delete_user,
-        'button': TransMessagesTemplates.delete_button
+        'button': TransMessagesTemplates.confirm_delete
     }
 
     def test_func(self):

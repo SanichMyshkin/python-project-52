@@ -37,6 +37,7 @@ class TransMessagesTemplates:
     update_button = _('update button')
     create_button = _('create button')
     delete_button = _('delete button')
+    confirm_delete = _('confirm delete')
     sign_in_button = _('sign in button')  # Войти
 
 

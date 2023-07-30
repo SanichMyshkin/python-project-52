@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-30 13:09+0000\n"
+"POT-Creation-Date: 2023-07-30 13:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,25 +20,25 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/tasks/filter.py:19 task_manager/translations/trans.py:57
+#: task_manager/tasks/filter.py:19 task_manager/translations/trans.py:58
 msgid "Label"
 msgstr "Метка"
 
 #: task_manager/tasks/filter.py:26 task_manager/templates/tasks/index.html:29
 #: task_manager/templates/tasks/show_task.html:31
-#: task_manager/translations/trans.py:58
+#: task_manager/translations/trans.py:59
 msgid "Status"
 msgstr "Статус"
 
 #: task_manager/tasks/filter.py:33 task_manager/templates/tasks/index.html:31
 #: task_manager/templates/tasks/show_task.html:27
-#: task_manager/translations/trans.py:59
+#: task_manager/translations/trans.py:60
 msgid "Executor"
 msgstr "Исполнитель"
 
 #: task_manager/tasks/filter.py:40 task_manager/templates/tasks/index.html:30
 #: task_manager/templates/tasks/show_task.html:23
-#: task_manager/translations/trans.py:62
+#: task_manager/translations/trans.py:63
 msgid "Author"
 msgstr "Автор"
 
@@ -98,12 +98,12 @@ msgid "start button"
 msgstr "Начать"
 
 #: task_manager/templates/labels/index.html:7
-#: task_manager/translations/trans.py:63
+#: task_manager/translations/trans.py:64
 msgid "Labels"
 msgstr "Метки"
 
 #: task_manager/templates/labels/index.html:9
-#: task_manager/translations/trans.py:78
+#: task_manager/translations/trans.py:79
 msgid "Create label"
 msgstr "Создать метку"
 
@@ -146,7 +146,7 @@ msgid "Tasks"
 msgstr "Задачи"
 
 #: task_manager/templates/tasks/index.html:12
-#: task_manager/translations/trans.py:67
+#: task_manager/translations/trans.py:68
 msgid "Create task"
 msgstr "Создать задачу"
 
@@ -159,7 +159,7 @@ msgid "ID"
 msgstr "ID"
 
 #: task_manager/templates/tasks/index.html:28
-#: task_manager/translations/trans.py:55
+#: task_manager/translations/trans.py:56
 msgid "Name"
 msgstr "Имя"
 
@@ -273,82 +273,86 @@ msgid "create button"
 msgstr "Создать"
 
 #: task_manager/translations/trans.py:40
+msgid "confirm delete"
+msgstr "Yes, delete"
+
+#: task_manager/translations/trans.py:41
 msgid "sign in button"
 msgstr "Войти"
 
-#: task_manager/translations/trans.py:45
+#: task_manager/translations/trans.py:46
 msgid "This status is used, you can't delete it"
 msgstr "Этот статус используется, вы не можете его удалить"
 
-#: task_manager/translations/trans.py:48
+#: task_manager/translations/trans.py:49
 msgid "The status successfully created"
 msgstr "Статус успешно создан"
 
-#: task_manager/translations/trans.py:49
+#: task_manager/translations/trans.py:50
 msgid "The status successfully updated"
 msgstr "Статус успешно изменен"
 
-#: task_manager/translations/trans.py:50
+#: task_manager/translations/trans.py:51
 msgid "The status successfully deleted"
 msgstr "Статус успешно удален"
 
-#: task_manager/translations/trans.py:56
+#: task_manager/translations/trans.py:57
 msgid "Description"
 msgstr "Описание"
 
-#: task_manager/translations/trans.py:60
+#: task_manager/translations/trans.py:61
 msgid "Date"
 msgstr "Дата"
 
-#: task_manager/translations/trans.py:61
+#: task_manager/translations/trans.py:62
 msgid "Task"
 msgstr "Задача"
 
-#: task_manager/translations/trans.py:68
+#: task_manager/translations/trans.py:69
 msgid "Update task"
 msgstr "Изменить задачу"
 
-#: task_manager/translations/trans.py:69
+#: task_manager/translations/trans.py:70
 msgid "To delete task"
 msgstr "Удалить задачу"
 
-#: task_manager/translations/trans.py:70
+#: task_manager/translations/trans.py:71
 msgid "The task can only be deleted by its author"
 msgstr "Задача может быть удалена только ее автором"
 
-#: task_manager/translations/trans.py:72
+#: task_manager/translations/trans.py:73
 msgid "The task successfully deleted"
 msgstr "Задача успешно удалена"
 
-#: task_manager/translations/trans.py:73
+#: task_manager/translations/trans.py:74
 msgid "The task successfully created"
 msgstr "Задача успешно создана"
 
-#: task_manager/translations/trans.py:74
+#: task_manager/translations/trans.py:75
 msgid "The task successfully updated"
 msgstr "Задача успешно изменена"
 
-#: task_manager/translations/trans.py:79
+#: task_manager/translations/trans.py:80
 msgid "Update label"
 msgstr "Изменить метку"
 
-#: task_manager/translations/trans.py:80
+#: task_manager/translations/trans.py:81
 msgid "To delete label"
 msgstr "Удалить метку"
 
-#: task_manager/translations/trans.py:81
+#: task_manager/translations/trans.py:82
 msgid "This label is used, you can't delete it"
 msgstr "Эта метка используется, вы не можете её удалить"
 
-#: task_manager/translations/trans.py:83
+#: task_manager/translations/trans.py:84
 msgid "The label successfully created"
 msgstr "Метка успешно создана"
 
-#: task_manager/translations/trans.py:84
+#: task_manager/translations/trans.py:85
 msgid "The label successfully deleted"
 msgstr "Метка успешно удалена"
 
-#: task_manager/translations/trans.py:85
+#: task_manager/translations/trans.py:86
 msgid "The label successfully updated"
 msgstr "Метка успешно изменена"
 
