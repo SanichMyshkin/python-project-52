@@ -79,7 +79,7 @@ class UsersDestroyView(LoginRequiredMixin, UserPassesTestMixin,
                        DeleteView):
     model = User
     template_name = 'users/delete.html'
-    success_url = reverse_lazy('user_login')
+    success_url = reverse_lazy('users')
     login_url = reverse_lazy('user_login')
     extra_context = {
         'header': TransMessagesTemplates.delete_user,
