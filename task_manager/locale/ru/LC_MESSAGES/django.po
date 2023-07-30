@@ -44,7 +44,7 @@ msgstr "Автор"
 
 #: task_manager/tasks/filter.py:46
 msgid "My tasks only"
-msgstr "Только мои задачи"
+msgstr "Только свои задачи"
 
 #: task_manager/templates/base.html:14 task_manager/templates/base.html:25
 msgid "Title"
