@@ -22,20 +22,6 @@ start:
 lint:
 	poetry run flake8 task_manager --exclude migrations
 
-
-
-
-
-
-
-pu:
-	git add .
-	git commit -m "Some fix"
-	git push
-
-pid: # Для поиска пида занимающего порт 8000 (необходим для разработки)
-	sudo lsof -i :8000
-
 en:
 	python manage.py makemessages -l en
 
