@@ -9,3 +9,5 @@ coverage.xml
 .idea/
 .env
 .DS_Store
+.dist/
+dist/
