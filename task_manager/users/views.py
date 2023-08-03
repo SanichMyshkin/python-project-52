@@ -18,12 +18,13 @@ from django.utils.translation import gettext as _
 # Create your views here.
 
 
-class No_valid:
+class CustomPermissionMixin:
+    login_url = reverse_lazy('user_login')
 
     def handle_no_permission(self):
         if self.request.user.is_authenticated:
-            message = TransMessagesUsers.no_rules_delete
-            url = self.success_url
+            message = TransMessagesUsers.no_rules_edit
+            url = reverse_lazy('users')
         else:
             message = TransMessagesUsers.no_login
             url = self.login_url
@@ -53,7 +54,8 @@ class UsersFormCreateView(SuccessMessageMixin, CreateView):
         return response
 
 
-class UsersUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class UsersUpdateView(LoginRequiredMixin, CustomPermissionMixin
+    , UserPassesTestMixin, UpdateView):
     model = User
     form_class = UserForm
     template_name = 'users/create.html'
@@ -79,9 +81,8 @@ class UsersUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return redirect(self.success_url)
 
 
-class UsersDestroyView(No_valid,
-                       LoginRequiredMixin, UserPassesTestMixin,
-                       DeleteView):
+class UsersDestroyView(LoginRequiredMixin, CustomPermissionMixin,
+                       UserPassesTestMixin, DeleteView):
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')
