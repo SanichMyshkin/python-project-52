@@ -17,6 +17,20 @@ from django.utils.translation import gettext as _
 
 # Create your views here.
 
+
+class No_valid:
+
+    def handle_no_permission(self):
+        if self.request.user.is_authenticated:
+            message = TransMessagesUsers.no_rules_delete
+            url = self.success_url
+        else:
+            message = TransMessagesUsers.no_login
+            url = self.login_url
+        messages.warning(self.request, message)
+        return redirect(url)
+
+
 class UsersView(ListView):
     model = User
     context_object_name = 'users'
@@ -64,18 +78,9 @@ class UsersUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         messages.success(self.request, TransMessagesUsers.update_success)
         return redirect(self.success_url)
 
-    def handle_no_permission(self):
-        if self.request.user.is_authenticated:
-            message = TransMessagesUsers.no_rules_edit
-            url = reverse_lazy('users')
-        else:
-            message = TransMessagesUsers.no_login
-            url = self.login_url
-        messages.warning(self.request, message)
-        return redirect(url)
 
 
-class UsersDestroyView(LoginRequiredMixin, UserPassesTestMixin,
+class UsersDestroyView(No_valid, LoginRequiredMixin, UserPassesTestMixin,
                        DeleteView):
     model = User
     template_name = 'users/delete.html'
@@ -90,15 +95,6 @@ class UsersDestroyView(LoginRequiredMixin, UserPassesTestMixin,
         user = self.get_object()
         return self.request.user.id == user.id
 
-    def handle_no_permission(self):
-        if self.request.user.is_authenticated:
-            message = TransMessagesUsers.no_rules_delete
-            url = self.success_url
-        else:
-            message = TransMessagesUsers.no_login
-            url = self.login_url
-        messages.warning(self.request, message)
-        return redirect(url)
 
     def form_valid(self, form):
         success_url = self.get_success_url()
