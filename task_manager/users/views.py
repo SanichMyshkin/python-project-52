@@ -54,8 +54,8 @@ class UsersFormCreateView(SuccessMessageMixin, CreateView):
         return response
 
 
-class UsersUpdateView(LoginRequiredMixin, CustomPermissionMixin
-    , UserPassesTestMixin, UpdateView):
+class UsersUpdateView(LoginRequiredMixin, CustomPermissionMixin,
+                      UserPassesTestMixin, UpdateView):
     model = User
     form_class = UserForm
     template_name = 'users/create.html'
