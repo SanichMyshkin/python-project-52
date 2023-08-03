@@ -79,8 +79,8 @@ class UsersUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return redirect(self.success_url)
 
 
-
-class UsersDestroyView(No_valid, LoginRequiredMixin, UserPassesTestMixin,
+class UsersDestroyView(No_valid,
+                       LoginRequiredMixin, UserPassesTestMixin,
                        DeleteView):
     model = User
     template_name = 'users/delete.html'
@@ -94,7 +94,6 @@ class UsersDestroyView(No_valid, LoginRequiredMixin, UserPassesTestMixin,
     def test_func(self):
         user = self.get_object()
         return self.request.user.id == user.id
-
 
     def form_valid(self, form):
         success_url = self.get_success_url()
