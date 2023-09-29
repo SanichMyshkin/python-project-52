@@ -12,3 +12,4 @@ coverage.xml
 .dist/
 dist/
 ds.sqlite3
+.vscode
