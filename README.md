@@ -123,7 +123,3 @@ It is also possible to start it local in development mode using:
     <dt><code>make shell</code></dt>
     <dd>Start Django shell (iPython REPL).</dd>
 </dl>
-
----
-> GitHub [@SanichMyshkin](https://github.com/SanichMyshkin) &nbsp;
-> LinkedIn [@Myshkin Alexndr](https://www.linkedin.com)
